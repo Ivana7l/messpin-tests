@@ -1,7 +1,7 @@
 class HomePageScreen {
     get buttonMoreOptions() {
        // return $('//*[@resource-id="com.wahrcoder.messpin:id/toolbar"]').$('//*[@content-desc="More options"]');
-      return $('android.view.ViewGroup').$('//*[@content-desc="More options"]');
+      return $('//*[@content-desc="More options"]');
     }
     get buttonSignOut () {
       return $('android.widget.ListView').$('//*[@text="Sign Out"]');

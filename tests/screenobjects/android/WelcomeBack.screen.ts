@@ -12,7 +12,7 @@ class WelcomeBackScreen {
       return $('//*[@resource-id="com.wahrcoder.messpin:id/trouble_SignIng_in"]');
     }
     get passwordInputError () {
-      return $('//*[@resource-id="com.wahrcoder.messpin:id/textinput_error"]');
+      return $(`//*[@text="Incorrect password."]`);
     }
 
 

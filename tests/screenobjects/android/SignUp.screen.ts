@@ -14,10 +14,10 @@ class SignUpScreen {
 
     }
     get nameInputError () {
-      return $('//*[@resource-id="com.wahrcoder.messpin:id/textinput_error"]');
+      return $('//*[@text="Please enter a first and last name."]');
     }
     get passwordInputError () {
-      return $('//*[@resource-id="com.wahrcoder.messpin:id/textinput_error"]');
+      return $('//*[@text="Password not strong enough. Use at least 6 characters and a mix of letters and numbers"]');
     }
 
 

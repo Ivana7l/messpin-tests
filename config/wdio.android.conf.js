@@ -12,7 +12,7 @@ config.port = 4723;
 // Specs
 // ============
 config.specs = [
-  path.join(process.cwd(), './tests/specs/android/*.spec.ts')
+  path.join(process.cwd(), './tests/specs/*.spec.ts')
 ];
 
 //
