@@ -18,19 +18,6 @@ describe('User should be redirected to SignIn page', () => {
         await expect(SignInScreen.buttonNext).toExist();
 
     });
-    /*
-        it('Button back should allways redirect to SignIn page', async () => {
-    
-            await driver.back();
-            await driver.back();
-            await driver.pause(2000);
-    
-            await expect(SignInScreen.emailInputElement).toExist();
-            await expect(SignInScreen.buttonNext).toExist();
-    
-    
-        });
-    */
 
 });
 

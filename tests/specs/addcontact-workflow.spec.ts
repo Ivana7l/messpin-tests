@@ -77,31 +77,3 @@ describe('Add Contact Workflow', () => {
 });
 
 
-
-
-
-
-
-/*
-        //login mainUser
-        //dohvati link i spremi u varijablu
-        //logout mainUser
-        //login userB
-        //iskoristi deeplink od mainUser
-        //assert provjeri jel mainUser ima kontakt userB
-
-
-
-
-
-
-        
-         await registerRandomUser();
-         await driver.pause(5000);
-         await HomePageScreen.buttonMoreOptions.click();
-         await HomePageScreen.buttonFriends.click();
-         await HomePageScreen.buttonAddFriend.click();
-         await driver.pause(500);
-         // await driver.execute( 'mobile:deepLink', { url: "https://messpin.page.link/MeQRkCxjJZv5qe5W7"});
- */
-
