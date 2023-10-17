@@ -23,7 +23,7 @@ Open Android Studio -> Tools -> SDK Manager -> Select desired SDK checkboxes -> 
 ## Run all specs
 npx wdio run .\config\wdio.android.conf.js
 ## Run one spec
-npx wdio run .\config\wdio.android.conf.js --spec ..\test\specs\webview.spec.ts
+npx wdio run .\config\wdio.android.conf.js --spec ..\tests\specs\webview.spec.ts
 
 
 ## Error cannt create a session - appium android inspector

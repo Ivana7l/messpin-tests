@@ -3,7 +3,7 @@ import WelcomeBackScreen from '../screenobjects/android/WelcomeBack.screen';
 import HomePageScreen from '../screenobjects/android/HomePage.screen';
 import helpers from '../helpers/helpers';
 
-import {login} from '../helpers/common';
+import { login } from '../helpers/common';
 
 
 describe('User should be redirected to SignIn page', () => {
@@ -18,19 +18,19 @@ describe('User should be redirected to SignIn page', () => {
         await expect(SignInScreen.buttonNext).toExist();
 
     });
-/*
-    it('Button back should allways redirect to SignIn page', async () => {
-
-        await driver.back();
-        await driver.back();
-        await driver.pause(2000);
-
-        await expect(SignInScreen.emailInputElement).toExist();
-        await expect(SignInScreen.buttonNext).toExist();
-
-
-    });
-*/
+    /*
+        it('Button back should allways redirect to SignIn page', async () => {
+    
+            await driver.back();
+            await driver.back();
+            await driver.pause(2000);
+    
+            await expect(SignInScreen.emailInputElement).toExist();
+            await expect(SignInScreen.buttonNext).toExist();
+    
+    
+        });
+    */
 
 });
 

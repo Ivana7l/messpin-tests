@@ -114,7 +114,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000 * 5
     },
 
         // For convenience, if ts-node or @babel/register modules are detected

@@ -1,14 +1,14 @@
 class HomePageScreen {
     get buttonMoreOptions() {
-       // return $('//*[@resource-id="com.wahrcoder.messpin:id/toolbar"]').$('//*[@content-desc="More options"]');
-      return $('//*[@content-desc="More options"]');
+        //  return $('//*[@resource-id="com.wahrcoder.messpin:id/toolbar"]').$('//*[@content-desc="More options"]');
+        return $('//*[@content-desc="More options"]');
     }
-    get buttonSignOut () {
-      return $('android.widget.ListView').$('//*[@text="Sign Out"]');
-      //$('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView');
+    get buttonSignOut() {
+        return $('//*[@text="Sign Out"]');
+        //$('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView');
     }
-    get buttonfriendsList() {
-        return $('android.widget.ListView').$('//*[@text="friendsList"]');
+    get buttonFriends() {
+        return $('android.widget.ListView').$('//*[@text="Friends"]');
         // return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.LinearLayout[2]/android.widget.Button');
     }
     get buttonSearch() {
@@ -30,11 +30,8 @@ class HomePageScreen {
     get buttonMessage() {
         return $('//*[@resource-id="com.wahrcoder.messpin:id/fab"]');
     }
-    
-    get buttonAddFriend() {
-        return $('//*[@resource-id="com.wahrcoder.messpin:id/fab_add_user"]');
-    }
-    get HomePage() {
+
+    get homePage() {
         return $('//*[@resource-id="com.wahrcoder.messpin:id/content_main"]');
     }
 
@@ -43,4 +40,4 @@ class HomePageScreen {
 
 }
 
-export default new HomePageScreen ();
+export default new HomePageScreen();

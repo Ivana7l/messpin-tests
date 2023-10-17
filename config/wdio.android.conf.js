@@ -28,6 +28,7 @@ config.capabilities = [
     "appium:app": "C:/Users/ivana/Desktop/MesspinTests/app/messpin-debug.apk",
     'appium:appPackage': 'com.wahrcoder.messpin',
     'appium:appWaitActivity': 'com.wahrcoder.*',
+    'appium:noReset': true,
     "appium:autoGrantPermissions": true
   }
 ]
