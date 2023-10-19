@@ -1,3 +1,5 @@
+import { userAEmail, userAPassword, userBEmail, userBPassword } from "./credentials";
+
 class Helpers {
     get randomEmail() {
         return 'messpin-test-' + Math.random() + '@test.com';
@@ -10,17 +12,17 @@ class Helpers {
     }
 
     get userAEmail() {
-        return '***REMOVED***';
+        return userAEmail;
     }
     get userAPassword() {
-        return '***REMOVED***';
+        return userAPassword;
     }
 
     get userBEmail() {
-        return '***REMOVED***';
+        return userBEmail;
     }
     get userBPassword() {
-        return '***REMOVED***';
+        return userBPassword;
     }
 
 }
