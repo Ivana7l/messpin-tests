@@ -34,6 +34,13 @@ class HomePageScreen {
     get homePage() {
         return $('//*[@resource-id="com.wahrcoder.messpin:id/content_main"]');
     }
+    
+    get chooseFriend() {
+        return $('//*[@resource-id="com.wahrcoder.messpin:id/feedList"]').$$('android.widget.RelativeLayout');
+    }
+    get feedList() {
+        return $('//*[@resource-id="com.wahrcoder.messpin:id/feedList"]');
+    }
 
 
 

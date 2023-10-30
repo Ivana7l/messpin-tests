@@ -3,6 +3,10 @@ import SignUpScreen from "../screenobjects/android/SignUp.screen";
 import WelcomeBackScreen from "../screenobjects/android/WelcomeBack.screen";
 import helpers from "./helpers";
 import HomePageScreen from "../screenobjects/android/HomePage.screen";
+import FriendsListScreen from "../screenobjects/android/FriendsList.screen";
+import SharingLinkScreen from "../screenobjects/android/SharingLink.screen";
+
+
 
 export let login = async () => {
     await SignInScreen.emailInputElement.setValue(helpers.userBEmail);
@@ -44,4 +48,33 @@ export let loginUser = async (email,password) => {
     await WelcomeBackScreen.passwordInputElement.setValue(password);
     await WelcomeBackScreen.buttonDone.click();
     await HomePageScreen.homePage.waitForExist();
+}
+
+export let addContact = async () => {
+    await loginUser(helpers.userAEmail, helpers.userAPassword);
+    await HomePageScreen.buttonMoreOptions.waitForExist();
+    await HomePageScreen.buttonMoreOptions.click();
+    await HomePageScreen.buttonFriends.click();
+    await FriendsListScreen.buttonAddFriend.click();
+    await driver.pause(500);
+    let link = await SharingLinkScreen.sharingLinkValue;
+    await driver.back();
+    await logoutUser();
+    await loginUser(helpers.userBEmail, helpers.userBPassword);
+    await driver.pause(2000);
+    await driver.closeApp();
+    await driver.pause(1000);
+    await driver.execute('mobile:deepLink', { url: link, package: 'com.wahrcoder.messpin' });
+    await driver.pause(2000);
+ 
+    
+}
+
+export let deleteContact = async () => {
+    await driver.closeApp();
+    await driver.launchApp(),
+    await HomePageScreen.buttonMoreOptions.click();
+    await HomePageScreen.buttonFriends.click();
+    await FriendsListScreen.friendsList.waitForExist();
+    await FriendsListScreen.allDeleteOptions[0].click();
 }

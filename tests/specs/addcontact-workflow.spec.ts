@@ -11,13 +11,10 @@ import SearchScreen from '../screenobjects/android/Search.screen';
 
 describe('Add Contact Workflow', () => {
     before(async () => {
-    });
-
-    after(async () => {
+        await loginUser(helpers.userAEmail, helpers.userAPassword);
     });
 
     it('Test add contact', async () => {
-        await loginUser(helpers.userAEmail, helpers.userAPassword);
         await HomePageScreen.buttonMoreOptions.waitForExist();
         await HomePageScreen.buttonMoreOptions.click();
         await HomePageScreen.buttonFriends.click();
@@ -56,7 +53,9 @@ describe('Add Contact Workflow', () => {
         await HomePageScreen.buttonMoreOptions.click();
         await HomePageScreen.buttonFriends.click();
         await FriendsListScreen.friendsList.waitForExist();
-        await FriendsListScreen.allDeleteOptions[1].click();
+        // await FriendsListScreen.allDeleteOptions[1].click();
+        // await FriendsListScreen.friendsList.$(`//*[@text="${helpers.userAEmail}"]`).parentElement().parentElement().$('//*[@resource-id="com.wahrcoder.messpin:id/friend_delete"]').click();
+        await $(`//*[@resource-id="com.wahrcoder.messpin:id/users_list"]//*[@text="${helpers.userAEmail}"]//..//..//*[@resource-id="com.wahrcoder.messpin:id/friend_delete"]`).click();
         await driver.pause(100);
         await expect($(`//*[@text="${helpers.userAEmail}"]`)).not.toExist();
 
@@ -72,6 +71,10 @@ describe('Add Contact Workflow', () => {
         await driver.pause(100);
         await expect($(`//*[@text="${helpers.userBEmail}"]`)).not.toExist();
 
+    });
+
+    after(async () => {
+        await logoutUser();
     });
 
 });

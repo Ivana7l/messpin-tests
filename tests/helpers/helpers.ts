@@ -17,12 +17,18 @@ class Helpers {
     get userAPassword() {
         return userAPassword;
     }
+    get userAName() {
+        return 'Nikola';
+    }
 
     get userBEmail() {
         return userBEmail;
     }
     get userBPassword() {
         return userBPassword;
+    }
+    get UserBName() {
+        return 'Ivan ';
     }
 
 }
